@@ -1,8 +1,8 @@
-// pane.scad
+// noti.scad
 
 $fn = 32;
 
-include <./pane_caja.scad>
-include <./pane_panel.scad>
+include <./noti_caja.scad>
+include <./noti_panel.scad>
 
-pane_panel();
+noti_panel();

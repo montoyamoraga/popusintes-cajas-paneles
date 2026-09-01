@@ -1,6 +1,7 @@
-// pane_panel.scad
-// rack/src/Pane.cpp es un panel en blanco: sin parametros, entradas,
-// salidas ni luces. el panel fisico solo lleva los tornillos de montaje
+// noti_panel.scad
+// panel en blanco
+// sin parametros, entradas, salidas ni luces.
+// el panel fisico solo lleva los tornillos de montaje
 
 include <../comun/constantes.scad>
 include <../comun/panel.scad>
