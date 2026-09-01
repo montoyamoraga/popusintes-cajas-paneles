@@ -9,8 +9,8 @@ include <../comun/tornillos.scad>
 include <../comun/texto.scad>
 include <../comun/versiones.scad>
 
-module pane_panel() {
-  ancho = MODULO_ANCHO * PANE_HP;
+module noti_panel() {
+  ancho = MODULO_ANCHO * NOTI_HP;
   alto  = MODULO_ALTURA_3U;
 
   difference() {
@@ -18,7 +18,7 @@ module pane_panel() {
 
     union() {
       agujeros_tornillos(ancho, alto);
-      grabados_panel(PANE_TEXTO, VERSION, ancho, alto);
+      grabados_panel(NOTI_TEXTO, VERSION, ancho, alto);
     }
   }
 }
