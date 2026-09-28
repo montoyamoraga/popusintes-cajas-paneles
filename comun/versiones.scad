@@ -7,6 +7,7 @@ include <./constantes.scad>
 VERSION = "v0.0.9";
 
 BOTE_TEXTO = "bote";
+BOTE_HP = 48;
 
 ATACONSO_TEXTO = "ataconso";
 ATACONSO_HP = 5;

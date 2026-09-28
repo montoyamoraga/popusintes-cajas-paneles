@@ -4,4 +4,4 @@ $fn = 32;
 
 include <./bote_caja.scad>
 
-bote_caja(42);
+bote_caja(BOTE_HP);
