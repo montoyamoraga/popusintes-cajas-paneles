@@ -13,7 +13,6 @@ module caja(
     texto,
     version,
     pared = CAJA_PARED,
-    profundidad = CAJA_PROFUNDIDAD,
     radio_esquina = 1.5,
     tamano_texto = MODULO_ALTURA_3U * 0.05,
     tamano_version = MODULO_ALTURA_3U * 0.035
@@ -21,7 +20,7 @@ module caja(
 
   ancho_int       = CAJA_ANCHO * hp;
   altura_int      = CAJA_ALTURA;
-  profundidad_int = profundidad;
+  profundidad_int = CAJA_PROFUNDIDAD;
 
   ancho_ext       = 2 * pared + ancho_int;
   altura_ext      = 2 * pared + altura_int;
