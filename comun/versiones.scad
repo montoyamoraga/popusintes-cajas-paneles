@@ -4,7 +4,7 @@ include <./constantes.scad>
 
 // version compartida por todas las cajas y paneles: un solo string,
 // grabado igual en cada pieza exportada
-VERSION = "v0.0.9";
+VERSION = "v0.0.10";
 
 BOTE_TEXTO = "bote";
 BOTE_HP = 48;
@@ -59,3 +59,7 @@ SUMA_HP = 5;
 // (ataconso, compa, envo, recta, relo, suma) y los de 8 hp pasan a
 // 10 hp (noti, rerelo, secu). ademas agujero de jack a 6.2 mm, agujero
 // de perilla a 6.6 mm y grosor de panel a 2.4 mm
+//
+// v0.0.10: bote pasa a 48 hp (el maximo par que cabe en una bambu lab
+// x1c) y a 90 mm de profundidad util interior. ademas el ancho de bote
+// queda en la constante BOTE_HP, que ahora usa tambien exportar-stl.sh
