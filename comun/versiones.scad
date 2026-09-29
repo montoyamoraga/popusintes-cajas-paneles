@@ -4,7 +4,7 @@ include <./constantes.scad>
 
 // version compartida por todas las cajas y paneles: un solo string,
 // grabado igual en cada pieza exportada
-VERSION = "v0.0.10";
+VERSION = "v0.0.11";
 
 BOTE_TEXTO = "bote";
 BOTE_HP = 48;
@@ -63,3 +63,9 @@ SUMA_HP = 5;
 // v0.0.10: bote pasa a 48 hp (el maximo par que cabe en una bambu lab
 // x1c) y a 90 mm de profundidad util interior. ademas el ancho de bote
 // queda en la constante BOTE_HP, que ahora usa tambien exportar-stl.sh
+//
+// v0.0.11: bote tiene su propia geometria, con rieles arriba y abajo
+// con agujeros piloto M3 cada 1 hp para atornillar los paneles, sin
+// lip perimetral, con 0.4 mm de holgura en el asiento y con un
+// agujero de 90 x 20 mm en la pared izquierda para el bus de poder.
+// para esta prueba la profundidad util de bote baja a 45 mm

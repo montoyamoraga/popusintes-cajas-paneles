@@ -10,17 +10,23 @@ include <../comun/versiones.scad>
 
 // profundidad util para los modulos, desde el piso hasta
 // la cara inferior del panel
-BOTE_PROFUNDIDAD_UTIL = 90;
+BOTE_PROFUNDIDAD_UTIL = 45; // PORHACER: volver a 90 despues de la prueba
 
-// cuanto entra cada riel desde la pared, deja ~112 mm libres
-// entre rieles para los pcb
-BOTE_RIEL_ANCHO = 8;
+// cuanto entra cada riel desde la pared, deja ~116 mm libres
+// entre rieles para los pcb. el agujero piloto termina a 4.3 mm
+// de la pared, quedan 1.7 mm de material
+BOTE_RIEL_ANCHO = 6;
 
-// espesor del riel bajo el panel, es el largo maximo de rosca
-BOTE_RIEL_ESPESOR = 8;
+// espesor del riel bajo el panel. los agujeros piloto atraviesan
+// tambien el chaflan, asi que caben tornillos M3 de 6 a 12 mm
+BOTE_RIEL_ESPESOR = 5;
 
 // juego total del asiento de los paneles, en x y en y
 BOTE_HOLGURA = 0.4;
+
+// agujero en la pared izquierda para pasar el bus de poder,
+// centrado en la pared. [largo en y, alto en z]
+BOTE_AGUJERO_BUS = [90, 20];
 
 // el tornillo izquierdo de cada panel queda a MARGEN_X del borde
 // y el derecho a MARGEN_X del otro borde, por eso los derechos
@@ -75,8 +81,8 @@ module bote_caja(
       for (y = [MARGEN_Y, MODULO_ALTURA_3U - MARGEN_Y])
         hull()
           for (dx = [0, BOTE_DESFASE_TORNILLOS])
-            translate([x_paneles + MARGEN_X + k * MODULO_ANCHO + dx, y_paneles + y, z_rieles - BOTE_RIEL_ESPESOR])
-              cylinder(h = BOTE_RIEL_ESPESOR + 1, d = ROSCA_DIAMETRO_PILOTO, $fn = 24);
+            translate([x_paneles + MARGEN_X + k * MODULO_ANCHO + dx, y_paneles + y, z_rieles - BOTE_RIEL_ESPESOR - BOTE_RIEL_ANCHO - 1])
+              cylinder(h = BOTE_RIEL_ESPESOR + BOTE_RIEL_ANCHO + 2, d = ROSCA_DIAMETRO_PILOTO, $fn = 24);
   }
 
   difference() {
@@ -91,6 +97,12 @@ module bote_caja(
     }
 
     agujeros_piloto();
+
+    // agujero del bus de poder en la pared izquierda
+    translate([-1,
+               altura_ext/2 - BOTE_AGUJERO_BUS[0]/2,
+               profundidad_ext/2 - BOTE_AGUJERO_BUS[1]/2])
+      cube([pared + 2, BOTE_AGUJERO_BUS[0], BOTE_AGUJERO_BUS[1]]);
 
     // grabados en la base
     texto_base(texto,   tamano_texto,   ancho_ext/2, 40*altura_ext/100);
