@@ -36,6 +36,11 @@ MARGEN_Y = 3;
 M3_DIAMETRO_PASO = 2.6;
 M3_DIAMETRO_ = 3.4;
 
+// agujero de tornillo M3 como elipse horizontal, para dar holgura en x
+// al atornillar el panel al riel. el alto es el diametro del agujero M3
+M3_ELIPSE_ANCHO = 6;
+M3_ELIPSE_ALTO = M3_DIAMETRO_;
+
 // constantes para agujeros de conectores en paneles
 // medidas en mm
 PANEL_ESPESOR = 2;
