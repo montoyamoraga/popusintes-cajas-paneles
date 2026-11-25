@@ -47,6 +47,11 @@ PANEL_ESPESOR = 2;
 ALTURA_AGUJERO_CONECTOR = 30;
 RADIO_AGUJERO_LED = 2.2; // led, agujero 4.4mm
 RADIO_AGUJERO_JACK = 3.1; // jack ts, agujero 6.2mm (holgura sobre 5.8mm medido)
+// rebaje circular en la cara frontal alrededor de cada jack, para que
+// la tuerca baje y alcance mas rosca. el panel queda con
+// PANEL_PROFUNDIDAD - JACK_REBAJE_HONDO de espesor en esa zona
+JACK_REBAJE_DIAMETRO = 10;
+JACK_REBAJE_HONDO = 1.2;
 RADIO_AGUJERO_BOTON = 4.4;
 RADIO_AGUJERO_PERILLA = 3.3; // perilla, agujero 6.6mm (holgura sobre 6.1mm medido): unica perilla, un solo tamanho
 
