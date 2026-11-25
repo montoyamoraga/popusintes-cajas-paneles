@@ -42,7 +42,10 @@ Esto deja los archivos en `stl-<version>/`, donde `<version>` es el valor de `VE
 - [relo](./relo/)
 - [rerelo](./rerelo/)
 - [secu](./secu/)
-- [suma](./suma/)
+
+### Plantilla
+
+- [plantilla/](./plantilla/): punto de partida para el panel de un módulo que vive en su propio repositorio, con los agujeros copiados de su placa de KiCad. Las instrucciones están en [plantilla/plantilla.scad](./plantilla/plantilla.scad).
 
 ## Uso como biblioteca
 
@@ -64,6 +67,8 @@ include <../terceros/popusintes-cajas-paneles/comun/comun.scad>
 Proyectos que usan esta biblioteca:
 
 - [bote](https://github.com/piruetasxyz/bote): caja de varios módulos con rieles. Vivía en este repositorio hasta octubre 2026.
+- [atenu](https://github.com/piruetasxyz/atenu): atenuador de dos canales.
+- [suma](https://github.com/piruetasxyz/suma): mezclador de tres entradas. Vivía en este repositorio hasta noviembre 2026.
 
 ## Versiones
 

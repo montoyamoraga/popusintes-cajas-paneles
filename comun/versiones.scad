@@ -39,9 +39,6 @@ RERELO_HP = 10;
 SECU_TEXTO = "secu";
 SECU_HP = 10;
 
-SUMA_TEXTO = "suma";
-SUMA_HP = 5;
-
 // versiones v0.0.x
 // pruebas de tamano
 // realizadas entre julio y agosto 2026

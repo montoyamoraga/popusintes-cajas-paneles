@@ -25,6 +25,17 @@ module agujero_jack(ancho, alto, px, py) {
   agujero_componente(RADIO_AGUJERO_JACK, p[0], p[1]);
 }
 
+// rebaje en la cara frontal (+z) alrededor de un jack, para que entre
+// la tuerca. se usa junto a agujero_jack, con la misma posicion.
+// los paneles mas gruesos que PANEL_PROFUNDIDAD pasan su profundidad
+// y un hondo mayor, para que el jack siga viendo el mismo espesor
+// (profundidad - hondo) y la tuerca alcance la misma rosca
+module rebaje_jack(ancho, alto, px, py, profundidad = PANEL_PROFUNDIDAD, hondo = JACK_REBAJE_HONDO) {
+  p = posicion(ancho, alto, px, py);
+  translate([p[0], p[1], profundidad - hondo])
+    cylinder(h = hondo + 1, d = JACK_REBAJE_DIAMETRO, $fn = 50);
+}
+
 // MediumLight
 module agujero_led(ancho, alto, px, py) {
   p = posicion(ancho, alto, px, py);
