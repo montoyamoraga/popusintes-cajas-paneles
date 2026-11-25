@@ -62,8 +62,6 @@ piezas=(
   "rerelo_panel:rerelo:rerelo_panel.scad:rerelo_panel()"
   "secu_caja:secu:secu_caja.scad:secu_caja()"
   "secu_panel:secu:secu_panel.scad:secu_panel()"
-  "suma_caja:suma:suma_caja.scad:suma_caja()"
-  "suma_panel:suma:suma_panel.scad:suma_panel()"
 )
 
 filtros=("$@")
