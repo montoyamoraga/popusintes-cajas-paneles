@@ -4,7 +4,7 @@ include <./constantes.scad>
 
 // version compartida por todas las cajas y paneles: un solo string,
 // grabado igual en cada pieza exportada
-VERSION = "v0.0.11";
+VERSION = "v0.0.12";
 
 ATACONSO_TEXTO = "ataconso";
 ATACONSO_HP = 5;
@@ -63,3 +63,10 @@ SECU_HP = 10;
 // lip perimetral, con 0.4 mm de holgura en el asiento y con un
 // agujero de 90 x 20 mm en la pared izquierda para el bus de poder.
 // para esta prueba la profundidad util de bote baja a 45 mm
+//
+// v0.0.12: rebaje_jack (rebaje en la cara frontal alrededor de cada
+// jack, para la tuerca) pasa a comun/, con profundidad y hondo
+// opcionales para paneles mas gruesos. suma sale de este repositorio
+// (vive en piruetasxyz/suma, igual que atenu) y se agrega plantilla/,
+// el punto de partida para el panel de un modulo en su propio
+// repositorio
